@@ -1,0 +1,8 @@
+
+<?jelly escape-by-default="true"?>
+<j:jelly xmlns:j="jelly:core">
+	<j:set var="recipients" value="${it.getRecipients(job)}"/>
+  	<td data="${recipients != 'Disabled' ? recipients : '-1'}">
+  		${recipients}
+  	</td>
+</j:jelly>
