@@ -1,18 +1,30 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>org.jenkins-ci.plugins</groupId>
-    <artifactId>plugin</artifactId>
-    <version>1.494</version><!-- which version of Jenkins is this plugin built against? -->
-  </parent>
-	<name> Email Ext Recipients Column</name>
-  <groupId>org.jenkins-ci.plugins</groupId>
-  <artifactId>email-ext-recipients-column</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>hpi</packaging>
-
-  <!-- get every artifact through repo.jenkins-ci.org, which proxies all the artifacts that we need -->
-  <repositories>
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.jenkins-ci.plugins</groupId>
+		<artifactId>plugin</artifactId>
+		<version>1.494</version><!-- which version of Jenkins is this plugin built 
+			against? -->
+	</parent>
+	<name> Email Ext Recipients Column Plugin</name>
+	<groupId>org.jenkins-ci.plugins</groupId>
+	<artifactId>email-ext-recipients-column</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>hpi</packaging>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8
+		</project.reporting.outputEncoding>
+		<maven-surefire-plugin.version>2.12</maven-surefire-plugin.version>
+		<maven-surefire-report-plugin.version>${maven-surefire-plugin.version}
+		</maven-surefire-report-plugin.version>
+	</properties>
+	<!-- get every artifact through repo.jenkins-ci.org, which proxies all the 
+		artifacts that we need -->
+	<repositories>
 		<repository>
 			<id>repo.jenkins-ci.org</id>
 			<url>http://repo.jenkins-ci.org/public/</url>
@@ -36,7 +48,14 @@
 			<email>iordan.boev@gmail.com</email>
 		</developer>
 	</developers>
-	
+	<scm>
+		<connection>
+		</connection>
+		<developerConnection>
+		</developerConnection>
+		<url>
+		</url>
+	</scm>
 	<dependencies>
 		<dependency>
 			<groupId>org.jenkins-ci.plugins</groupId>
@@ -44,7 +63,6 @@
 			<version>2.25</version>
 		</dependency>
 	</dependencies>
-	
 	<build>
 		<plugins>
 			<plugin>
@@ -192,5 +210,4 @@
 		</plugins>
 	</reporting>
 </project>
-  
 </project>
