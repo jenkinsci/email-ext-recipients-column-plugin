@@ -1,72 +1,82 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.jenkins-ci.plugins</groupId>
-		<artifactId>plugin</artifactId>
-		<version>4.51</version>
-                <relativePath></relativePath>
-	</parent>
-	<name> Email Ext Recipients Column Plugin</name>
-	<groupId>org.jenkins-ci.plugins</groupId>
-	<artifactId>email-ext-recipients-column</artifactId>
-	<version>1.1-SNAPSHOT</version>
-	<packaging>hpi</packaging>
-	<url>
-		https://wiki.jenkins-ci.org/display/JENKINS/Email+Ext+Recipients+Column+Plugin
-	</url>
-	
-	<!-- get every artifact through repo.jenkins-ci.org, which proxies all the 
-		artifacts that we need -->
-	<repositories>
-		<repository>
-			<id>repo.jenkins-ci.org</id>
-			<url>https://repo.jenkins-ci.org/public/</url>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>repo.jenkins-ci.org</id>
-			<url>https://repo.jenkins-ci.org/public/</url>
-		</pluginRepository>
-	</pluginRepositories>
-	
-	<developers>
-		<developer>
-			<id>stefanbrausch</id>
-			<name>Stefan Brausch</name>
-			<email>stefanbrausch@protonmail.ch</email>
-		</developer>
-		<developer>
-			<id>boev</id>
-			<name>Yordan Boev</name>
-			<email>iordan.boev@gmail.com</email>
-		</developer>
-	</developers>
-	<scm>
-		<connection>scm:git:https://github.com/jenkinsci/email-ext-recipients-column-plugin.git</connection>
-		<developerConnection>scm:git:git@github.com:jenkinsci/email-ext-recipients-column-plugin.git</developerConnection>
-		<url>https://github.com/jenkinsci/email-ext-recipients-column-plugin</url>
-	</scm>
-	
-	<properties>
-                <jenkins.version>2.346.3</jenkins.version>
-	</properties>
-	
-        <dependencyManagement>
-                <dependencies>
-                        <dependency>
-                                <groupId>io.jenkins.tools.bom</groupId>
-                                <artifactId>bom-2.346.x</artifactId>
-                                <version>1723.vcb_9fee52c9fc</version>
-                                <type>pom</type>
-                                <scope>import</scope>
-                        </dependency>
-                </dependencies>
-        </dependencyManagement>
-	<dependencies>
-        <dependency>
-			<groupId>org.jenkins-ci.plugins</groupId>
-			<artifactId>email-ext</artifactId>
-		</dependency>
-	</dependencies>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.jenkins-ci.plugins</groupId>
+    <artifactId>plugin</artifactId>
+    <version>4.51</version>
+    <relativePath></relativePath>
+  </parent>
+
+  <groupId>org.jenkins-ci.plugins</groupId>
+  <artifactId>email-ext-recipients-column</artifactId>
+  <version>1.1-SNAPSHOT</version>
+  <packaging>hpi</packaging>
+
+  <name> Email Ext Recipients Column Plugin</name>
+  <url>https://wiki.jenkins-ci.org/display/JENKINS/Email+Ext+Recipients+Column+Plugin</url>
+
+  <developers>
+    <developer>
+      <id>markewaite</id>
+      <name>Mark Waite</name>
+      <email>mark.earl.waite@gmail.com</email>
+    </developer>
+    <!-- <developer> -->
+    <!--   <id>stefanbrausch</id> -->
+    <!--   <name>Stefan Brausch</name> -->
+    <!--   <email>stefanbrausch@protonmail.ch</email> -->
+    <!--   <role>emeritus</role> -->
+    <!-- </developer> -->
+    <!-- <developer> -->
+    <!--   <id>boev</id> -->
+    <!--   <name>Yordan Boev</name> -->
+    <!--   <email>iordan.boev@gmail.com</email> -->
+    <!--   <role>emeritus</role> -->
+    <!-- </developer> -->
+  </developers>
+
+  <scm>
+    <connection>scm:git:https://github.com/jenkinsci/email-ext-recipients-column-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:jenkinsci/email-ext-recipients-column-plugin.git</developerConnection>
+    <url>https://github.com/jenkinsci/email-ext-recipients-column-plugin</url>
+  </scm>
+
+  <properties>
+    <jenkins.version>2.346.3</jenkins.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>io.jenkins.tools.bom</groupId>
+        <artifactId>bom-2.346.x</artifactId>
+        <version>1723.vcb_9fee52c9fc</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <dependencies>
+  <dependency>
+      <groupId>org.jenkins-ci.plugins</groupId>
+      <artifactId>email-ext</artifactId>
+    </dependency>
+  </dependencies>
+
+  <!-- get every artifact through repo.jenkins-ci.org, which proxies all the
+    artifacts that we need -->
+  <repositories>
+    <repository>
+      <id>repo.jenkins-ci.org</id>
+      <url>https://repo.jenkins-ci.org/public/</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>repo.jenkins-ci.org</id>
+      <url>https://repo.jenkins-ci.org/public/</url>
+    </pluginRepository>
+  </pluginRepositories>
 </project>
