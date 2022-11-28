@@ -11,7 +11,7 @@
 
   <groupId>org.jenkins-ci.plugins</groupId>
   <artifactId>email-ext-recipients-column</artifactId>
-  <version>${revision}${changelist}</version>
+  <version>${changelist}</version>
   <packaging>hpi</packaging>
 
   <name>Email Ext Recipients Column Plugin</name>
@@ -44,8 +44,7 @@
   </scm>
 
   <properties>
-    <revision>1.1</revision>
-    <changelist>-SNAPSHOT</changelist>
+    <changelist>999999-SNAPSHOT</changelist>
     <gitHubRepo>jenkinsci/email-ext-recipients-column-plugin</gitHubRepo>
     <jenkins.version>2.346.3</jenkins.version>
   </properties>
