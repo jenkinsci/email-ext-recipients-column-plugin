@@ -14,8 +14,8 @@
   <version>1.1-SNAPSHOT</version>
   <packaging>hpi</packaging>
 
-  <name> Email Ext Recipients Column Plugin</name>
-  <url>https://wiki.jenkins-ci.org/display/JENKINS/Email+Ext+Recipients+Column+Plugin</url>
+  <name>Email Ext Recipients Column Plugin</name>
+  <url>https://github.com/jenkinsci/email-ext-recipients-column-plugin</url>
 
   <developers>
     <developer>
