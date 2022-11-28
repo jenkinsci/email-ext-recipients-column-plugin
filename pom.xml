@@ -11,11 +11,11 @@
 
   <groupId>org.jenkins-ci.plugins</groupId>
   <artifactId>email-ext-recipients-column</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>${revision}${changelist}</version>
   <packaging>hpi</packaging>
 
   <name>Email Ext Recipients Column Plugin</name>
-  <url>https://github.com/jenkinsci/email-ext-recipients-column-plugin</url>
+  <url>https://github.com/${gitHubRepo}</url>
 
   <developers>
     <developer>
@@ -38,12 +38,15 @@
   </developers>
 
   <scm>
-    <connection>scm:git:https://github.com/jenkinsci/email-ext-recipients-column-plugin.git</connection>
-    <developerConnection>scm:git:git@github.com:jenkinsci/email-ext-recipients-column-plugin.git</developerConnection>
-    <url>https://github.com/jenkinsci/email-ext-recipients-column-plugin</url>
+    <connection>scm:git:https://github.com/${gitHubRepo}.git</connection>
+    <developerConnection>scm:git:git@github.com:${gitHubRepo}.git</developerConnection>
+    <url>https://github.com/${gitHubRepo}</url>
   </scm>
 
   <properties>
+    <revision>1.1</revision>
+    <changelist>-SNAPSHOT</changelist>
+    <gitHubRepo>jenkinsci/email-ext-recipients-column-plugin</gitHubRepo>
     <jenkins.version>2.346.3</jenkins.version>
   </properties>
 
