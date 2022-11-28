@@ -52,14 +52,13 @@ public final class EmailExtRecipientsColumn extends ListViewColumn {
         if (!(job instanceof AbstractProject<?, ?>)) {
             return "Not an AbstractProject";
         }
-        try {
-            AbstractProject<?, ?> project = (AbstractProject<?, ?>) job;
-            recipients = project.getPublishersList().get(
-                    ExtendedEmailPublisher.class).recipientList;
-        } catch (NullPointerException e) {
-            // values could not be retrieved
+        AbstractProject<?, ?> project = (AbstractProject<?, ?>) job;
+        if (project.getPublishersList() == null
+            || project.getPublishersList().get(ExtendedEmailPublisher.class) == null) {
             return "Disabled";
         }
+        recipients = project.getPublishersList().get(ExtendedEmailPublisher.class).recipientList;
+
         return recipients;
     }
 }
