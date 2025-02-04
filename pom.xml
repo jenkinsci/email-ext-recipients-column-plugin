@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>4.88</version>
+    <version>5.6</version>
     <relativePath></relativePath>
   </parent>
 
@@ -17,26 +17,6 @@
   <name>Email Ext Recipients Column Plugin</name>
   <url>https://github.com/${gitHubRepo}</url>
 
-  <developers>
-    <developer>
-      <id>markewaite</id>
-      <name>Mark Waite</name>
-      <email>mark.earl.waite@gmail.com</email>
-    </developer>
-    <!-- <developer> -->
-    <!--   <id>stefanbrausch</id> -->
-    <!--   <name>Stefan Brausch</name> -->
-    <!--   <email>stefanbrausch@protonmail.ch</email> -->
-    <!--   <role>emeritus</role> -->
-    <!-- </developer> -->
-    <!-- <developer> -->
-    <!--   <id>boev</id> -->
-    <!--   <name>Yordan Boev</name> -->
-    <!--   <email>iordan.boev@gmail.com</email> -->
-    <!--   <role>emeritus</role> -->
-    <!-- </developer> -->
-  </developers>
-
   <scm>
     <connection>scm:git:https://github.com/${gitHubRepo}.git</connection>
     <developerConnection>scm:git:git@github.com:${gitHubRepo}.git</developerConnection>
@@ -47,8 +27,8 @@
     <changelist>999999-SNAPSHOT</changelist>
     <gitHubRepo>jenkinsci/email-ext-recipients-column-plugin</gitHubRepo>
     <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
-    <jenkins.baseline>2.452</jenkins.baseline>
-    <jenkins.version>${jenkins.baseline}.4</jenkins.version>
+    <jenkins.baseline>2.479</jenkins.baseline>
+    <jenkins.version>${jenkins.baseline}.1</jenkins.version>
   </properties>
 
   <dependencyManagement>
@@ -56,7 +36,7 @@
       <dependency>
         <groupId>io.jenkins.tools.bom</groupId>
         <artifactId>bom-${jenkins.baseline}.x</artifactId>
-        <version>3944.v1a_e4f8b_452db_</version>
+        <version>4051.v78dce3ce8b_d6</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
