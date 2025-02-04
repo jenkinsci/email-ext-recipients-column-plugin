@@ -10,7 +10,7 @@ import hudson.views.ListViewColumnDescriptor;
 import hudson.views.ListViewColumn;
 import net.sf.json.JSONObject;
 
-import org.kohsuke.stapler.StaplerRequest;
+import org.kohsuke.stapler.StaplerRequest2;
 
 public final class EmailExtRecipientsColumn extends ListViewColumn {
 
@@ -25,7 +25,7 @@ public final class EmailExtRecipientsColumn extends ListViewColumn {
         }
 
         @Override
-        public ListViewColumn newInstance(final StaplerRequest request,
+        public ListViewColumn newInstance(final StaplerRequest2 request,
                 final JSONObject formData) throws FormException {
             return new EmailExtRecipientsColumn();
         }
